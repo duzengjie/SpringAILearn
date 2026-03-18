@@ -2,10 +2,12 @@ package com.duzj.springai.controller;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class MyController {
+@RequestMapping("/01")
+public class MyController {
 
     private final ChatClient chatClient;
 
