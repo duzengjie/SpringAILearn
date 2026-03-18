@@ -8,32 +8,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/02")
-public class MyController02 {
+@RequestMapping("/03")
+public class MyController03 {
 
-   /* @Autowired
-    private  ChatModel chatModel;
+    @Autowired
+    private  ChatClient openAiChatClient;
+    @Autowired
+    private  ChatClient zhipuChatClient;
 
     @GetMapping("/ai")
     void generation(String userInput) {
-        // 程序化创建ChatClient实例
-        ChatClient chatClient = ChatClient.create(chatModel);
-        String content = chatClient.prompt()
+        String content = openAiChatClient.prompt()
                 .user(userInput)
                 .call()
                 .content();
         System.out.println(content);
 
-        // 或者使用构建器进行更多控制
-        ChatClient.Builder builder = ChatClient.builder(chatModel);
-        ChatClient customChatClient = builder
-                .defaultSystem("You are a helpful assistant.")
-                .build();
 
-        String content2 = customChatClient.prompt()
+        String content2 = zhipuChatClient.prompt()
                 .user(userInput)
                 .call()
                 .content();
         System.out.println(content2);
-    }*/
+    }
 }

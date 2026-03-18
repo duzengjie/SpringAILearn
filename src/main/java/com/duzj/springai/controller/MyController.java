@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/01")
 public class MyController {
 
-    private final ChatClient chatClient;
+   /* private final ChatClient chatClient;
 
     public MyController(ChatClient.Builder chatClientBuilder) {
         this.chatClient = chatClientBuilder.build();
@@ -21,5 +21,5 @@ public class MyController {
                 .user(userInput)
                 .call()
                 .content();
-    }
+    }*/
 }
